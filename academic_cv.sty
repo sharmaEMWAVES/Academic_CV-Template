@@ -1,0 +1,90 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{academic_cv}
+
+\RequirePackage{fontawesome5}
+\RequirePackage[utf8]{inputenc}	
+\RequirePackage{setspace}
+\RequirePackage{etaremune}
+\RequirePackage{amsmath,amsfonts,amsthm}
+\RequirePackage{fancyhdr}				
+\RequirePackage{enumitem}
+\RequirePackage{gensymb}
+\RequirePackage{graphicx}
+\RequirePackage{color}
+\RequirePackage{array}
+\RequirePackage{gensymb}
+\RequirePackage{tabularx}
+\RequirePackage{ragged2e}
+%%%%%%%%%%%%%%FONTS%%%%%%%%%%%%%%%%%
+\RequirePackage{moresize}
+%\RequirePackage[defaultsans]{droidsans}
+%\RequirePackage[default]{comfortaa}
+%\RequirePackage{cmbright}
+%\RequirePackage[default]{raleway}
+%\RequirePackage{fetamont}
+%\RequirePackage{tgtermes}
+%\RequirePackage[default]{gillius}
+%\RequirePackage{tgbonum}
+%\RequirePackage{Archivo}
+\RequirePackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+%%%%%%%%%%%%%%%ColorStyle%%%%%%%%%%%%%%%%%
+\newcommand*{\cvcolor}[1]{\RequirePackage{cvcolor#1}}
+%%%%%%%%%%HEADER and FOOTER%%%%%%%%%%
+% remove top header line
+\renewcommand{\headrulewidth}{0pt} 
+%remove botttom header line
+\renewcommand{\footrulewidth}{0pt}	  	
+%remove pagenum
+\renewcommand{\thepage}{}	
+
+
+%%%%%%%%%%%%%%% Section and Subsection %%%%%%%%%%%%%%%%%%%%
+\newcommand{\cvsection}[1]{\begin{flushleft}
+		\Large\textcolor{cvsec}{\textbf{#1}}
+  \end{flushleft}
+}
+\newcommand{\cvsubsection}[1]{
+\begin{flushleft}
+		\normalsize\textcolor{cvsubsec}{\textbf{#1}}
+\end{flushleft}
+}
+%%%%%%%%%%%%%%% CV Item 3  %%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cvitem}[3]{\begin{tabularx}{\textwidth}{X p{3.5cm}}\textbf{{#2}} -- {#3} & \RaggedLeft{#1}
+    \end{tabularx}
+}
+
+%%%%%%%%%%%%%%%%% Awards %%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cvitemmod}[2]{\begin{tabularx}{\textwidth}{X p{1cm}} {#2} & \RaggedLeft{#1}
+    \end{tabularx}
+}
+%%%%%%%%%%%%%%% Volunteer and Professional Activities %%%%%%%%%
+\newcommand{\cvpro}[2]{\textbf{#1} -- {#2}}
+%%%%%%%%%%%%%%%%% Reviewers %%%%%%%%%%%%%%%%%%%
+\newcommand{\cvrevj}[2]{\textbf{{#1}} -- {#2}}
+\newcommand{\cvrevc}[2]{\begin{tabularx}{\textwidth}{X p{1cm}} {#2} & \RaggedLeft{#1}
+    \end{tabularx}
+}
+%%%%%%%%%%%%%%%% Membership%%%%%%%%%%%%%%%%%
+\newcommand{\cvmember}[2]{\begin{tabularx}{\textwidth}{X p{3.5cm}} {#2} & \RaggedLeft{#1}
+    \end{tabularx}
+}
+
+%% Name definition %%
+\newcommand{\name}[1]{\begin{flushleft}
+	\LARGE \textbf{#1}
+\end{flushleft}}
+%% Current Position %%
+\newcommand{\position}[1]{\begin{flushleft}
+ \Large \textit{#1}
+\end{flushleft}}
+%FONTAWESOME ICONS DEFINITIONS
+%email
+\def \emailicon {\faEnvelope}
+\newcommand{\email}[1]{\emailicon\hspace{3pt} #1}
+%website
+\def \websiteicon {\faGlobe}
+\newcommand{\website}[1]{\websiteicon \hspace{3pt} #1}
+%Address
+\def \addressicon {\faMapMarker}
+\newcommand{\address}[1]{\addressicon \hspace{3pt} #1}

@@ -1,0 +1,61 @@
+%%%% Academic CV Template by Abhishek Sharma %%%
+
+%% Document Class %%
+\documentclass[11pt]{article}	
+\usepackage[letterpaper]{geometry}		
+\geometry{top=2cm, bottom=2cm, left=1.5cm, right=1.5cm}
+%% CV Style %%
+\usepackage{academic_cv} 
+\cvcolor{blue}	%% Color theme (blue, red, green) %%
+\cfoot{\textit{Updated: 2024}}
+\setstretch{1.2}
+
+\begin{document}
+\pagestyle{fancy}
+\name{Name}
+\vspace{-25pt}
+\position{Current Position}
+\address{Address}\\[5pt]
+\website{Website}\\
+\email{E-Mail Address}\vspace{3pt}
+\hrule\hrule
+\cvsection{Experience}
+\cvitem{Year Range}{Position}{Organization}
+\cvsection{Education}
+\cvitem{Graduation year}{Ph.D. in Electrical Engineering}{Department and Organization}
+\cvsection{Academic Visits}
+\cvitem{Year Range}{Visiting Research Student}{Department and Organization}
+\cvsection{Publications}
+\cvsubsection{Journal Papers}
+\begin{etaremune} %% In reverse chronological order
+\itemsep0em
+\item Journal entry 1.
+\item Journal entry 2.
+\end{etaremune}
+\cvsubsection{Conference Papers}
+\begin{etaremune}
+\itemsep0em
+\item Conference entry 1.
+\item Conference entry 2.
+\end{etaremune}
+\cvsection{Awards and Honors}
+\cvitemmod{Year}{Award}
+\cvsection{Editorial Services}
+\cvitem{Year Range}{Editor}{Journal Name}
+\cvsection{Professional/Volunteer Activities}
+\cvpro{Session Chair}{Name of Conference} \\[5pt]
+\cvpro{Committee Member}{IEEE}
+\cvsection{Reviewers}
+\cvsubsection{Journals}
+\cvrevj{Publisher Name}{Journal Names} \\[5pt]
+\cvrevj{Publisher Name}{Journal Names} \\[5pt]
+\cvsubsection{Conferences}
+\cvrevc{Year}{Name of conferences}
+\cvsection{Professional Memberships}
+\cvmember{Year}{Member, IEEE}
+\cvsection{References}
+\begin{enumerate}
+    \item Reference 1
+    \item Reference 2
+\end{enumerate}
+\end{document}
